@@ -28,15 +28,15 @@ display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path
 
 # arucoID = 12
 Inspec_panel = rospy.get_param('tag12')[0]#[0.33565261545991887, -0.2745230369010141, 0.2059755184403631]
-Inspec_panel_qua = rospy.get_param('tag12')[0]+rospy.get_param('tag12')[1]#[0.33652467558540594, -0.2749759883220442, 0.20541202056776836, -0.41392029095141303, 0.5599210594303042, 0.5785001056771537, -0.4248482407597626]
+Inspec_panel_qua = rospy.get_param('tag12')#[0]+rospy.get_param('/tag12')[1]#[0.33652467558540594, -0.2749759883220442, 0.20541202056776836, -0.41392029095141303, 0.5599210594303042, 0.5785001056771537, -0.4248482407597626]
 # arucoID = 14
-Inspec_lid_storage = rospy.get_param('tag14')[0]#[0.2636325217102241-0.04, -0.1863268703997993, -0.14519731884030188]
-Inspec_lid_storage_qua =rospy.get_param('tag14')[0]+rospy.get_param('tag14')[1]#[0.2627005704280358, -0.18725236367743253, -0.14572040839702463, -0.004944659506009925, -0.0049388815186685335, -0.7114809434512608, 0.7026706375660068]
+Inspec_lid_storage = rospy.get_param('tag14')#[0][0.2636325217102241-0.04, -0.1863268703997993, -0.14519731884030188]
+Inspec_lid_storage_qua =rospy.get_param('tag14')#[0] + rospy.get_param('/tag14')[1]#[0.2627005704280358, -0.18725236367743253, -0.14572040839702463, -0.004944659506009925, -0.0049388815186685335, -0.7114809434512608, 0.7026706375660068]
 
 goToUp(move_group)
-lid_original_position = PickLid_Backup1(Inspec_panel_qua, move_group)
+lid_original_position = PickLid(Inspec_panel_qua, move_group)
 gripperPos("semi_close")
 lid_Store_position = StoreLid(Inspec_lid_storage, move_group)
-rospy.sleep(1)
-rospy.set_param('/lidStorage', lid_Store_position)
-rospy.sleep(2)
+rospy.sleep(4)
+rospy.set_param('lidStorage', lid_Store_position)
+rospy.sleep(4)
