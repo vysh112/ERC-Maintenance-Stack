@@ -81,7 +81,50 @@ To do that navigate to the `scripts` folder of that package, and run the followi
 ```sh
 chmod +x *.py 
 ```
-### Launching the Objective
+
+ ### Pull docker
+ ```sh
+ sudo docker pull ghcr.io/vysh112/erc-maintenance-stack:main
+ ```
+ ### Run Codes
+
+ Run the docker.
+ ```sh
+ sudo docker run -it --net=host --name mrm_img ghcr.io/vysh112/erc-maintenance-stack:main
+ ```
+ Navigate to the scripts folder inside the docker.
+ ```sh
+ cd src/marsrovermanipal_td1/scripts
+ ```
+ Make the scripts executable.
+ ```sh
+ chmod +x *.py 
+ ```
+ Navigate back to the root directory.
+ ```sh
+ cd ../../
+ ```
+ Open another terminal and navigate to UR3 simulation directory.
+ ```sh
+ cd catkin_ws
+ ```
+ Source setup.bash.
+ ```sh
+ source devel/setup.bash
+ ```
+ Launch the UR3 simulation
+ ```sh
+ roslaunch ur3_sim simulation.launch
+ ```
+ Go back to docker terminal and source it.
+ ```sh
+ source devel/setup.bash
+ ```
+ Launch the Objectives.
+ ```sh
+ roslaunch marsrovermanipal_td1 obj1.launch.
+ ```
+ ### Launching the Objective
 To run the simulation, run `roslaunch <package_name> obj<objective_no>.launch` and the parameters if any.
 
 Example:

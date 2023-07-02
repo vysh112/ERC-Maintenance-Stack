@@ -33,6 +33,7 @@ Inspec_panel_qua = rospy.get_param('tag12')#[0]+rospy.get_param('/tag12')[1]#[0.
 Inspec_lid_storage = rospy.get_param('tag14')#[0][0.2636325217102241-0.04, -0.1863268703997993, -0.14519731884030188]
 Inspec_lid_storage_qua =rospy.get_param('tag14')#[0] + rospy.get_param('/tag14')[1]#[0.2627005704280358, -0.18725236367743253, -0.14572040839702463, -0.004944659506009925, -0.0049388815186685335, -0.7114809434512608, 0.7026706375660068]
 
+gripperPos("open")
 goToUp(move_group)
 lid_original_position = PickLid(Inspec_panel_qua, move_group)
 gripperPos("semi_close")
