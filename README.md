@@ -83,41 +83,41 @@ Example:
 
 - objective 1
 ```sh
-roslaunch td1 obj1.launch
+roslaunch marsrovermanipal_marsrovermanipal_td1 obj1.launch
 ```
 - objective 2
 ```sh
-roslaunch td1 obj2.launch tags:="1, 2, 3, 4"
+roslaunch marsrovermanipal_marsrovermanipal_td1 obj2.launch tags:="1, 2, 3, 4"
 ```
 - objective 3
 ```sh
-roslaunch td1 obj3.launch
+roslaunch marsrovermanipal_marsrovermanipal_td1 obj3.launch
 ```
 - objective 4
 ```sh
-roslaunch td1 obj4.launch angle:=45
+roslaunch marsrovermanipal_marsrovermanipal_td1 obj4.launch angle:=45
 ```
 - objective 5
 ```sh
-roslaunch td1 obj5.launch
+roslaunch marsrovermanipal_td1 obj5.launch
 ```
 - objective 6
 ```sh
-roslaunch td1 obj6.launch
+roslaunch marsrovermanipal_td1 obj6.launch
 ```
 - objective 7
 ```sh
-roslaunch td1 obj7.launch
+roslaunch marsrovermanipal_td1 obj7.launch
 ```
 - objective 8
 ```sh
-roslaunch td1 obj8.launch
+roslaunch marsrovermanipal_td1 obj8.launch
 ```
 - objective 9
 ```sh
-roslaunch td1 obj9.launch tag:=5
+roslaunch marsrovermanipal_td1 obj9.launch tag:=5
 ```
 - objective 10
 ```sh
-roslaunch td1 obj10.launch
+roslaunch marsrovermanipal_td1 obj10.launch
 ```
