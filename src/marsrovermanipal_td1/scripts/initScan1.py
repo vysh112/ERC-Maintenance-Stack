@@ -54,7 +54,7 @@ def nodeKiller(toKill, aruco, override = False):
     isStart = datetime.datetime.now()
     while True:
         diff = ((datetime.datetime.now() - isStart).total_seconds())/60.0
-        if len(aruco.aruco)>=14 or diff>=3:
+        if len(aruco.aruco)>=14 or diff>=6:
             sleep(1)
             gripperPos("close") 
             os.system("rosnode kill aruco_detect")
