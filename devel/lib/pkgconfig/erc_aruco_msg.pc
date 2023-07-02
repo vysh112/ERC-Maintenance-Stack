@@ -1,8 +1,0 @@
-prefix=/home/vyshnav/ERC-Maintenance-Stack/devel
-
-Name: erc_aruco_msg
-Description: Description of erc_aruco_msg
-Version: 0.0.0
-Cflags: -I/home/vyshnav/ERC-Maintenance-Stack/devel/include
-Libs: -L${prefix}/lib 
-Requires: 

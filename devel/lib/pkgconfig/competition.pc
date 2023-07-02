@@ -1,8 +1,0 @@
-prefix=/home/vyshnav/UR3_ERC_Maintenance_Stack/devel
-
-Name: competition
-Description: Description of competition
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

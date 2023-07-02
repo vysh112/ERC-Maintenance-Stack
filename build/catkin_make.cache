@@ -1,2 +1,0 @@
-marsrovermanipal_td1:packages/aruco_detect:packages/erc_aruco_checker:packages/erc_aruco_msg:packages/fiducial_msgs:packages/fiducial_slam:packages/vision_msgs
--DCATKIN_DEVEL_PREFIX=/home/vyshnav/ERC-Maintenance-Stack/devel -DCMAKE_INSTALL_PREFIX=/home/vyshnav/ERC-Maintenance-Stack/install -G Unix Makefiles
