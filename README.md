@@ -50,7 +50,12 @@ roslaunch ur3_sim real_station.launch
 ## Building
 This repository contains all the competition submissions.
 
-To clone the repo, navigate to your root directory:
+To clone the repo:
+```sh
+https://github.com/vysh112/ERC-Maintenance-Stack.git
+```
+
+navigate to your root directory:
 ```sh
 cd
 ```
