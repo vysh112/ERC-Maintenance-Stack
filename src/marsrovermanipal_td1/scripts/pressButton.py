@@ -7,19 +7,21 @@ import copy
 from gripperControl import *
 from std_msgs.msg import Bool
 
-flag = True
+flag = False
 
 def callback(data, move_group):
     flag = not data.data
-    while flag:
+    if flag:
+        print("Button has been pressed")
+    else:
         waypoints = []
         currentPose = move_group.get_current_pose().pose
         currentPose.position.x += 0.005
-        #waypoints.append(copy.deepcopy(currentPose))
-        (plan, fraction) = move_group.compute_cartesian_path(
-            waypoints, 0.005, 0.0  
-        )  
+        waypoints.append(copy.deepcopy(currentPose))
+        (plan, fraction) = move_group.compute_cartesian_path(waypoints, 0.005, 0.0)
         move_group.execute(plan, wait=True)
+        print("Movement performed")
+
 
 def press(id, move_group):
     move_group.go([radians(0), radians(-120), radians(100), radians(20), radians(90), radians(-90)])
@@ -41,4 +43,3 @@ def press(id, move_group):
         move_group.go([radians(0), radians(-120), radians(100), radians(20), radians(90), radians(-90)])
     else:
         rospy.logerr("Parameter 'tag%d' not found." % id)
-
