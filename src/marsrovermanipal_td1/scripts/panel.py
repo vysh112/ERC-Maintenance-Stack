@@ -123,7 +123,7 @@ def PickLid(box,move_group):
     (plan, fraction) = move_group.compute_cartesian_path(
         waypoints, 0.01, 0.0, True)
     move_group.execute(plan, wait=True)
-    print("Reached Lid Potition")
+    print("Reached Lid Position")
     wpose = move_group.get_current_pose(end).pose
     print(wpose)
     print("")
@@ -172,7 +172,7 @@ def StoreLid(lidStorage,move_group):
 
 
     lid_position = move_group.get_current_joint_values()
-    print("Reached Lid Stoage Position")
+    print("Reached Lid Storage Position")
     print(lid_position)
     print("")
 
@@ -201,7 +201,7 @@ def GoToScan(box,move_group):
     (plan, fraction) = move_group.compute_cartesian_path(
         waypoints, 0.01, 0.0, True)
     move_group.execute(plan, wait=True)
-    print("Sanning Position Reached")
+    print("Scanning Position Reached")
     print("")
 
 

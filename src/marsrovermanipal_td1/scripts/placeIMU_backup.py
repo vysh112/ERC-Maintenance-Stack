@@ -151,7 +151,7 @@ def PlaceImu(Panel, move_group):
     rospy.sleep(2)
 
     print("")
-    print("********IMU Placeed********")
+    print("********IMU Placed********")
     print("")
 
     # try:
