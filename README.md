@@ -112,7 +112,7 @@ chmod +x *.py
  ```sh
  source devel/setup.bash
  ```
- Launch the UR3 simulation
+ Launch the UR3 simulation.
  ```sh
  roslaunch ur3_sim simulation.launch
  ```
