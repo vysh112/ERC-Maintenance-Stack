@@ -1,4 +1,4 @@
 <launch>
-<node pkg="marsrovermanipal_c" name="secretButton" type="secretButton.py" output="screen" respawn="false">
+<node pkg="marsrovermanipal_td1" name="secretButton" type="secretButton.py" output="screen" respawn="false">
 </node>
 </launch>
