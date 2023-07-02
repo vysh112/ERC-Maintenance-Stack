@@ -57,7 +57,7 @@ cd
 clone this repository
 Navigate to the repository:
 ```sh
-cd ERC-Maintenance-Stack23
+cd ERC-Maintenance-Stack
 ```
 Now, use the `catkin_make` tool to build the workspace:
 ```sh
