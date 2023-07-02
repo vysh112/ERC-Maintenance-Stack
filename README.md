@@ -57,7 +57,7 @@ cd
 clone this repository
 Navigate to the repository:
 ```sh
-cd UR3_ERC_Maintenance_Stack23
+cd ERC-Maintenance-Stack23
 ```
 Now, use the `catkin_make` tool to build the workspace:
 ```sh
@@ -67,7 +67,7 @@ If you don’t want to have to source the setup file every time you open a new s
 ```sh
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-echo "source ~/UR3_ERC_Maintenance_Stack23/devel/setup.bash" >> ~/.bashrc
+echo "source ~/ERC-Maintenance-Stack/devel/setup.bash" >> ~/.bashrc
 ```
 ## Running the Simulation
 Before running the launch file, you will need to make all the Python files executable.
@@ -83,19 +83,19 @@ Example:
 
 - objective 1
 ```sh
-roslaunch marsrovermanipal_marsrovermanipal_td1 obj1.launch
+roslaunch marsrovermanipal_td1 obj1.launch
 ```
 - objective 2
 ```sh
-roslaunch marsrovermanipal_marsrovermanipal_td1 obj2.launch tags:="1, 2, 3, 4"
+roslaunch marsrovermanipal_td1 obj2.launch tags:="1, 2, 3, 4"
 ```
 - objective 3
 ```sh
-roslaunch marsrovermanipal_marsrovermanipal_td1 obj3.launch
+roslaunch marsrovermanipal_td1 obj3.launch
 ```
 - objective 4
 ```sh
-roslaunch marsrovermanipal_marsrovermanipal_td1 obj4.launch angle:=45
+roslaunch marsrovermanipal_td1 obj4.launch angle:=45
 ```
 - objective 5
 ```sh
