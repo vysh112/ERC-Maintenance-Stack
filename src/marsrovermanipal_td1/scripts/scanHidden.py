@@ -46,7 +46,7 @@ def callback(data):
                 br.sendTransform(aruco[frame.fiducial_id][0], aruco[frame.fiducial_id][1], rospy.Time(0), "Aruco_" + str(frame.fiducial_id), "base_link")
                 rospy.sleep(1)
                 print("Hidden Button Id =" + str(frame.fiducial_id))
-                os.system("rosnode kill aruco_detect_hidden")
+                os.system("rosnode kill aruco_detect")
                 os.system("rosnode kill scanHidden")
 
 rospy.init_node("scanHidden", anonymous=False)
@@ -60,7 +60,8 @@ ls = tf.TransformListener()
 display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=20)
 # arucoID = 12
 #Inspec_panel = rospy.get_param('tag12')[0]#[0.33565261545991887, -0.2745230369010141, 0.2059755184403631]
-move_group.go([radians(-61),radians(-31),radians(-43),radians(-31),radians(-76),radians(47)])
+move_group.go([2.683677368810393, -2.056093619957387, -0.3763446063986917, -1.8882485188918992, 1.656095005705466, 1.4123027690124825])
+# move_group.go([radians(-61),radians(-31),radians(-43),radians(-31),radians(-76),radians(47)])
 #GoToScan(Inspec_panel, move_group)
 
 rospy.Subscriber('fiducial_transforms', FiducialTransformArray, callback)

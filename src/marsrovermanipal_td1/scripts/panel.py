@@ -88,9 +88,6 @@ def goToUp(move_group):
           radians(-90), radians(0), radians(90)]
     move_group.go(up)
 
-
-
-
 def PickLid(box,move_group):
 
     aboveStorage = [radians(150), radians(-80), radians(-75),
@@ -123,7 +120,7 @@ def PickLid(box,move_group):
     (plan, fraction) = move_group.compute_cartesian_path(
         waypoints, 0.01, 0.0, True)
     move_group.execute(plan, wait=True)
-    print("Reached Lid Position")
+    print("Reached Lid Potition")
     wpose = move_group.get_current_pose(end).pose
     print(wpose)
     print("")
@@ -133,7 +130,7 @@ def PickLid(box,move_group):
     print(lid_position)
     print("")
 
-    return (wpose.position.x, wpose.position.y, wpose.position.z)
+    return [wpose.position.x, wpose.position.y, wpose.position.z]
 
 
 def StoreLid(lidStorage,move_group):
@@ -149,10 +146,10 @@ def StoreLid(lidStorage,move_group):
         waypoints, 0.01, 0.0, True)
     move_group.execute(plan, wait=True)
     print("up")
-
+    rospy.sleep(3)
     waypoints = []
-    wpose.position.x = lidStorage[0][0] - 0.068
-    wpose.position.y = lidStorage[0][1] - 0.065
+    wpose.position.x = lidStorage[0][0] - 0.08
+    wpose.position.y = lidStorage[0][1] - 0.08
 
     waypoints.append(copy.deepcopy(wpose))
     (plan, fraction) = move_group.compute_cartesian_path(
@@ -230,7 +227,7 @@ def PlaceLid(lid_position,move_group):
     wpose = move_group.get_current_pose().pose
     wpose.position.x = lid_position[0][0] + 0.01
     wpose.position.y = lid_position[0][1] - 0.0032
-   
+
 
     waypoints.append(copy.deepcopy(wpose))
     (plan, fraction) = move_group.compute_cartesian_path(
@@ -240,7 +237,7 @@ def PlaceLid(lid_position,move_group):
     waypoints = []
     wpose = move_group.get_current_pose().pose
 
-    wpose.position.z = lid_position[0][2]+ 0.125
+    wpose.position.z = lid_position[0][2]
 
     waypoints.append(copy.deepcopy(wpose))
     (plan, fraction) = move_group.compute_cartesian_path(
