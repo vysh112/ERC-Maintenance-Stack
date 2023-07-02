@@ -52,7 +52,7 @@ This repository contains all the competition submissions.
 
 To clone the repo:
 ```sh
-https://github.com/vysh112/ERC-Maintenance-Stack.git
+git clone https://github.com/vysh112/ERC-Maintenance-Stack.git
 ```
 
 navigate to your root directory:
