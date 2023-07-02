@@ -1,0 +1,8 @@
+prefix=/home/vyshnav/ERC-Maintenance-Stack/install
+
+Name: marsrovermanipal_c
+Description: Description of marsrovermanipal_c
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

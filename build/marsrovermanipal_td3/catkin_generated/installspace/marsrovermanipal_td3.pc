@@ -1,0 +1,8 @@
+prefix=/home/vyshnav/UR3_ERC_Maintenance_Stack/install
+
+Name: marsrovermanipal_td3
+Description: Description of marsrovermanipal_td3
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/vyshnav/ERC-Maintenance-Stack/install
+
+Name: erc_aruco_checker
+Description: Description of erc_aruco_checker
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

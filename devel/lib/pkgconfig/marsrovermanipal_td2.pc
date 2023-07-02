@@ -1,0 +1,8 @@
+prefix=/home/vyshnav/UR3_ERC_Maintenance_Stack/devel
+
+Name: marsrovermanipal_td2
+Description: Description of marsrovermanipal_td2
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: fiducial_msgs geometry_msgs roscpp rospy std_msgs message_runtime

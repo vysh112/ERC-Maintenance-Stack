@@ -1,0 +1,7 @@
+set(aruco_detect_SETUP_PY_SETUP_MODULE "distutils.core")
+set(aruco_detect_SETUP_PY_VERSION "0.12.0")
+set(aruco_detect_SETUP_PY_SCRIPTS "")
+set(aruco_detect_SETUP_PY_PACKAGES "marker_generation")
+set(aruco_detect_SETUP_PY_PACKAGE_DIRS "scripts/marker_generation")
+set(aruco_detect_SETUP_PY_MODULES "")
+set(aruco_detect_SETUP_PY_MODULE_DIRS "")
