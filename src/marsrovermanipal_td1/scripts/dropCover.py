@@ -15,5 +15,7 @@ robot = moveit_commander.RobotCommander()
 display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=20)
 
 gripperPos("open")
-rospy.sleep(4)
+rospy.sleep(2)
+goToUp(move_group)
+rospy.sleep(3)
 GoToScan(rospy.get_param('tag12'), move_group)
