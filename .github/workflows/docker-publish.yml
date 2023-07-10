@@ -3,12 +3,12 @@ name: Docker
 on:
   push:
     branches:
-      - master
+      - main
     tags:
       - '*'
   pull_request:
     branches:
-      - master
+      - main
   workflow_dispatch:
       
 env:
@@ -32,7 +32,7 @@ jobs:
         with:
           images: ${{ env.IMAGE_ID }}
           tags: |
-            type=raw,value=latest,enable=${{ endsWith(github.ref, 'master') }}
+            type=raw,value=latest,enable=${{ endsWith(github.ref, 'main') }}
             type=ref,event=tag
           flavor: |
             latest=false
